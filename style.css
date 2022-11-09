@@ -7,3 +7,77 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+ul {
+  list-style: none;
+}
+
+body {
+  background-color: #f8f8f8;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.align-self-center {
+  align-self: center;
+}
+
+/* Navigation */
+
+.nav-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 15vh;
+}
+
+.logo {
+  display: flex;
+  height: 15vh;
+}
+
+.logo-text {
+  font-size: 30px;
+  font-family: Herculanum, Optima;
+}
+
+.logo-img img {
+  height: 100px;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  width: 60vh;
+}
+
+.menu ul {
+  display: flex;
+}
+
+.menu-list {
+  display: flex;
+  font-family: Optima;
+  font-size: 20px;
+  width: 30vh;
+}
+
+.menu-list li {
+  display: flex;
+  margin-right: 60px;
+}
+
+.menu-social {
+  display: flex;
+  justify-content: center;
+  width: 30vh;
+}
+
+.menu-social li {
+  display: flex;
+  font-size: 20px;
+  margin-right: 20px;
+}
