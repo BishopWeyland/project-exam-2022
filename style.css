@@ -187,11 +187,16 @@ footer {
   display: flex;
   width: 100%;
   justify-content: center;
+  flex-direction: column;
+}
+
+#submit-message {
+  height: fit-content;
 }
 
 .form-message {
-  padding: 10px;
-  text-align: center;
+  padding: 20px;
+  border: dashed 4px green;
   margin-bottom: 20px;
 }
 
