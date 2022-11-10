@@ -34,6 +34,18 @@ h2 {
   font-family: Optima;
 }
 
+.btn:hover {
+  padding: 18px 80px;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+}
+
+.btn:active {
+  background-color: #791c10;
+  -webkit-transition-duration: 0.1s;
+  transition-duration: 0.1s;
+}
+
 .align-self-center {
   align-self: center;
 }
@@ -148,6 +160,7 @@ footer {
     url("./images/compressed/tokyo_sky_tree.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: 20%;
   height: 85vh;
   display: flex;
   justify-content: center;
@@ -182,6 +195,12 @@ footer {
   transition-duration: 0.4s;
 }
 
+.hero-btn:active {
+  background-color: #eaeaea;
+  -webkit-transition-duration: 0.1s;
+  transition-duration: 0.1s;
+}
+
 /* Contact */
 .form-container {
   width: fit-content;
@@ -189,7 +208,7 @@ footer {
   display: flex;
   width: 100%;
   justify-content: center;
-  flex-direction: column;
+  display: flex;
 }
 
 #submit-message {
@@ -268,18 +287,19 @@ textarea {
 
 .about-image-1 img {
   width: 25vw;
-  margin-top: 30px;
+  margin-top: 50px;
   border-radius: 10px;
 }
 
 .about-section {
+  margin-top: 50px;
   padding: 0px 30px 30px 30px;
   width: 35vw;
   max-width: 700px;
 }
 
 .about-section h1 {
-  margin: 30px 0px;
+  margin: 0px 0px 30px 0px;
 }
 
 .about-section p {
@@ -304,6 +324,6 @@ textarea {
   background-size: cover;
   background-position: 30%;
   width: 30vw;
-  margin-bottom: 30px;
+  margin: 50px 0px 60px;
   border-radius: 10px;
 }
