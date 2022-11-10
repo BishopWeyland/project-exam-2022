@@ -62,7 +62,7 @@ a {
   display: flex;
   font-family: Optima;
   font-size: 20px;
-  width: 30vh;
+  width: 30vw;
 }
 
 .menu-list li {
@@ -73,11 +73,46 @@ a {
 .menu-social {
   display: flex;
   justify-content: center;
-  width: 30vh;
+  width: 30vw;
 }
 
 .menu-social li {
   display: flex;
   font-size: 20px;
   margin-right: 20px;
+}
+
+/* footer */
+footer {
+  display: flex;
+  justify-content: center;
+}
+
+/* index */
+.main-container {
+  display: flex;
+}
+
+.carousel-container {
+  background-color: #f8f8f8;
+  width: 60vw;
+  height: 85vh;
+}
+
+.carousel {
+  background-color: dimgrey;
+  height: 55vh;
+}
+
+.carousel-info {
+  height: 25vh;
+  padding: 30px;
+  margin-bottom: 20px;
+}
+
+.content-container {
+  background-color: #eaeaea;
+  height: 85vh;
+  width: 40vw;
+  box-shadow: inset 0 0 18px #707070;
 }
