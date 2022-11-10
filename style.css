@@ -95,6 +95,10 @@ h2 {
   margin-right: 18px;
 }
 
+.active-page {
+  border-bottom: solid 2px black;
+}
+
 /* footer */
 footer {
   display: flex;
@@ -174,4 +178,70 @@ footer {
   padding: 18px 80px;
   -webkit-transition-duration: 0.4s;
   transition-duration: 0.4s;
+}
+
+/* Contact */
+.form-container {
+  width: fit-content;
+  padding: 60px;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.form-message {
+  padding: 10px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.error-container {
+  position: absolute;
+  z-index: 2;
+  top: 55px;
+  left: 0;
+  width: 300px;
+}
+
+.form-control small {
+  color: #ae2412;
+  font-size: 12px;
+}
+
+.error-container-message {
+  position: absolute;
+  z-index: 2;
+  top: 220px;
+  left: 0;
+  width: 400px;
+}
+
+.form-control {
+  margin-top: 40px;
+}
+
+.form-control label {
+  color: black;
+  font-family: "Helvetica Neue";
+  font-size: 20px;
+  position: relative;
+  z-index: 1;
+}
+.form-control input {
+  height: 30px;
+  width: 95%;
+}
+
+textarea {
+  resize: none;
+}
+
+#message {
+  width: 95%;
+}
+
+#submit-button {
+  margin-top: 50px;
+  border: none;
+  font-size: 20px;
 }
