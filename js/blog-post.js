@@ -15,7 +15,7 @@ async function getPost() {
     const response = await fetch(url);
     const results = await response.json();
 
-    postImage.style.backgroundImage = `url(${results.jetpack_featured_media_url})`;
+    postImage.innerHTML = ` <img src="${results.jetpack_featured_media_url}">`;
 
     postHeader.innerHTML = `
     <h1>${results.title.rendered}</h1>
