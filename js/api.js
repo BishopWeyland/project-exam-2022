@@ -14,10 +14,11 @@ async function getBlogs() {
     for (let i = 0; i < results.length; i++) {
       blogList.innerHTML += `
       <div class="blog-card">
-      <a href="post.html?id=${results[i].id}">
-        <img src="${results[i].jetpack_featured_media_url}">
-        <h2>${results[i].title.rendered}</h2>
-        <h3>${results[i].excerpt.rendered}</h3>
+        <a href="post.html?id=${results[i].id}">
+            <img src="${results[i].jetpack_featured_media_url}">
+            
+            <h2>${results[i].title.rendered}</h2>
+            <h3>${results[i].excerpt.rendered}</h3>
         </a>
     </div>`;
     }
