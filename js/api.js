@@ -9,6 +9,8 @@ async function getBlogs() {
     const response = await fetch(url);
     const results = await response.json();
 
+    blogList.innerHTML = "";
+
     for (let i = 0; i < results.length; i++) {
       blogList.innerHTML += `
       <div class="blog-card">
