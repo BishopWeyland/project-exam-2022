@@ -1,8 +1,7 @@
 const url = `https://willand.tech/blog/wp-json/wp/v2/posts`;
-const showAllUrl = `https://willand.tech/blog/wp-json/wp/v2/posts?per_page=100`;
 const blogList = document.querySelector(".blog-list");
 const contentContainer = document.querySelector(".content-container");
-const showAllButton = document.querySelector(".show-all");
+const perPage = document.querySelector(".per-page-select");
 const categories = document.querySelectorAll(".category");
 
 async function getBlogs(url) {
@@ -31,21 +30,22 @@ async function getBlogs(url) {
 
 getBlogs(url);
 
-showAllButton.addEventListener("click", () => {
+perPage.onchange = function (event) {
+  newUrl = url + `?per_page=${event.target.value}`;
   blogList.innerHTML = "";
-  getBlogs(showAllUrl);
-});
+  getBlogs(newUrl);
+};
 
 categories.forEach(function (category) {
   category.onclick = function (event) {
     let showAllUrl;
     if (event.target.id === "all") {
-      showAllUrl = url;
+      newUrl = url;
     } else {
       const chosenCategory = event.target.value;
-      showAllUrl = url + `?categories=${chosenCategory}`;
+      newUrl = url + `?categories=${chosenCategory}`;
     }
     blogList.innerHTML = "";
-    getBlogs(showAllUrl);
+    getBlogs(newUrl);
   };
 });

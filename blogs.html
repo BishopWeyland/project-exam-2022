@@ -63,6 +63,16 @@
           <div class="search">
             <input type="search" class="search-input" />
             <button class="search-button btn">Search</button>
+            <div class="per-page-container">
+              <label for="">Number per page:</label>
+              <select class="per-page-select">
+                <option value="4">4</option>
+                <option value="8">8</option>
+                <option selected value="10">10</option>
+                <option value="12">12</option>
+                <option value="100">All</option>
+              </select>
+            </div>
           </div>
           <div class="categories">
             <label for="all">All</label>
@@ -94,9 +104,6 @@
           </div>
           <div class="blog-list">
             <div class="loading"></div>
-          </div>
-          <div><button class="show-all btn">Show all</button></div>
-        </div>
       </div>
     </main>
     <script src="./js/api.js"></script>
