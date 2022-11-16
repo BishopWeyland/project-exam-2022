@@ -400,6 +400,10 @@ textarea {
   width: 300px;
 }
 
+.show-all {
+  margin: 50px 0px;
+}
+
 /* Blog post page */
 
 .post-container {
