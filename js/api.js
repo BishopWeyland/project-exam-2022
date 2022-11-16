@@ -3,6 +3,7 @@ const blogList = document.querySelector(".blog-list");
 const contentContainer = document.querySelector(".content-container");
 const perPage = document.querySelector(".per-page-select");
 const categories = document.querySelectorAll(".category");
+const searchButton = document.querySelector(".search-button");
 
 async function getBlogs(url) {
   try {
@@ -38,7 +39,7 @@ perPage.onchange = function (event) {
 
 categories.forEach(function (category) {
   category.onclick = function (event) {
-    let showAllUrl;
+    let newUrl;
     if (event.target.id === "all") {
       newUrl = url;
     } else {
@@ -49,3 +50,10 @@ categories.forEach(function (category) {
     getBlogs(newUrl);
   };
 });
+
+searchButton.onclick = function () {
+  searchInput = document.querySelector(".search-input").value;
+  let newUrl = url + `?search=${searchInput}`;
+  blogList.innerHTML = "";
+  getBlogs(newUrl);
+};
