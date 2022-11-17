@@ -156,7 +156,42 @@ button {
   height: 85vh;
 }
 
+.carousel-button {
+  position: absolute;
+  z-index: 2;
+  font-size: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgba(255, 255, 255, 0.5);
+  padding: 10px 15px;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+.carousel-button:hover,
+.carousel-button:focus {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.carousel-button:focus {
+  outline: 2px soldi black;
+}
+
+.carousel-button.prev {
+  left: 1rem;
+}
+
+.carousel-button.next {
+  right: 1rem;
+}
+
+.slide {
+  position: absolute;
+}
+
 .carousel {
+  position: relative;
   background-color: dimgrey;
   height: 55vh;
 }
@@ -409,6 +444,21 @@ textarea {
 
 .search-button:hover {
   padding: 15px 30px;
+}
+
+.per-page-container {
+  margin: 30px 0px;
+}
+
+.categories input {
+  margin-right: 80px;
+}
+
+.radio-select-container {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .blog-list {
