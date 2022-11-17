@@ -19,7 +19,7 @@ async function getPost() {
 
     postHeader.innerHTML = `
     <h1>${results.title.rendered}</h1>
-        <h2>${results.excerpt.rendered}</h2>`;
+        <p>${results.excerpt.rendered}</p>`;
 
     postContainer.innerHTML = `${results.content.rendered}
     <div class="date">

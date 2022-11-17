@@ -32,6 +32,7 @@ a {
 
 h1 {
   font-family: "Cairo Play", "Roboto", sans-serif;
+  font-size: 40px;
 }
 
 h2,
@@ -186,10 +187,6 @@ button {
   right: 1rem;
 }
 
-.slide {
-  position: absolute;
-}
-
 .carousel {
   position: relative;
   background-color: dimgrey;
@@ -203,10 +200,25 @@ button {
   object-position: center;
 }
 
+.track {
+  display: flex;
+  justify-content: center;
+}
+
 .carousel-info {
   height: 25vh;
   padding: 30px;
   margin-bottom: 18px;
+}
+
+.carousel-info h2 {
+  font-family: "Cairo Play", "Roboto", sans-serif;
+  font-size: 40px;
+}
+
+.carousel-info p {
+  font-family: "Roboto", sans-serif;
+  font-size: 25px;
 }
 
 .content-container {
