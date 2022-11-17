@@ -91,7 +91,7 @@ button {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  height: 15vh;
+  max-height: 15vh;
 }
 
 .logo {
@@ -163,9 +163,9 @@ button {
   font-size: 2rem;
   top: 50%;
   transform: translateY(-50%);
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.7);
   padding: 10px 15px;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.2);
   border-radius: 5px;
 }
 
@@ -219,6 +219,7 @@ button {
 .carousel-info p {
   font-family: "Roboto", sans-serif;
   font-size: 25px;
+  margin-bottom: 40px;
 }
 
 .content-container {
@@ -525,4 +526,34 @@ textarea {
 .date {
   width: 100%;
   margin: 30px 0px;
+}
+
+@media (max-width: 1600px) {
+  /* global styles */
+  .nav-bar {
+    height: 13vh;
+  }
+
+  /* layout */
+  .carousel-container {
+    height: 60vh;
+  }
+
+  .carousel {
+    height: 35vh;
+  }
+
+  .carousel img {
+    height: 35vh;
+  }
+
+  .carousel-info {
+    height: 20vh;
+  }
+
+  .content-container {
+    height: 60vh;
+  }
+
+  /* blogs */
 }

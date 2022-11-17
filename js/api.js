@@ -19,7 +19,7 @@ async function getBlogs(url) {
             <img src="${results[i].jetpack_featured_media_url}">
             
             <h2>${results[i].title.rendered}</h2>
-            <h3>${results[i].excerpt.rendered}</h3>
+            ${results[i].excerpt.rendered}
         </a>
     </div>`;
     }
