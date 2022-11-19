@@ -149,12 +149,13 @@ button {
 /* Page layout */
 .main-container {
   display: flex;
+  height: 90vh;
 }
 
 .carousel-container {
   background-color: #f8f8f8;
   width: 55vw;
-  height: 90vh;
+  height: 100%;
 }
 
 .carousel-button {
@@ -190,14 +191,16 @@ button {
 .carousel {
   position: relative;
   background-color: dimgrey;
-  height: 55vh;
+  height: 60%;
 }
 
 .carousel img {
   object-fit: cover;
-  height: 55vh;
+  height: 100%;
   width: 55vw;
   object-position: center;
+  position: absolute;
+  inset: 0;
 }
 
 .track {
@@ -206,7 +209,7 @@ button {
 }
 
 .carousel-info {
-  height: 30vh;
+  height: 30%;
   padding: 30px;
   margin-bottom: 18px;
 }
@@ -224,7 +227,7 @@ button {
 
 .content-container {
   background-color: var(--brand-grey);
-  height: 90vh;
+  height: 100%;
   width: 45vw;
   box-shadow: inset 0 0 18px #707070;
   padding: 0px 30px;
@@ -250,7 +253,7 @@ footer {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 20%;
-  height: 90vh;
+  height: 100%;
   display: flex;
   justify-content: center;
   padding-top: 200px;
@@ -534,33 +537,3 @@ textarea {
   
   }
 } */
-
-@media (max-width: 1600px) {
-  /* global styles */
-  .nav-bar {
-    height: 13vh;
-  }
-
-  /* layout */
-  .carousel-container {
-    height: 60vh;
-  }
-
-  .carousel {
-    height: 35vh;
-  }
-
-  .carousel img {
-    height: 35vh;
-  }
-
-  .carousel-info {
-    height: 20vh;
-  }
-
-  .content-container {
-    height: 60vh;
-  }
-
-  /* blogs */
-}
