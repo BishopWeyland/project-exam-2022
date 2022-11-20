@@ -301,6 +301,10 @@ footer {
   display: flex;
 }
 
+#form label {
+  font-family: "Roboto", sans-serif;
+}
+
 #submit-message {
   height: fit-content;
 }
@@ -488,7 +492,7 @@ textarea {
   display: flex;
   flex-direction: column;
   width: 300px;
-  height: 350px;
+  height: 360px;
   border-radius: 10px;
   margin: 20px;
   box-shadow: 0 5px 9px 0 rgba(0, 0, 0, 0.2), 0 7px 22px 0 rgba(0, 0, 0, 0.2);
@@ -497,6 +501,11 @@ textarea {
 
 .blog-card h2 {
   font-family: "Cairo Play", cursive, "Roboto", sans-serif;
+}
+
+.blog-card p {
+  font-family: "Roboto", sans-serif;
+  margin: 0px 20px 20px 20px;
 }
 
 .blog-card img {

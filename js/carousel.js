@@ -8,6 +8,7 @@ async function getCarousel(url) {
   try {
     const response = await fetch(url);
     const results = await response.json();
+    console.log(results);
     let a = 0;
 
     track.innerHTML = `<a class="slide" href="post.html?id=${results[a].id}"><img src="${results[a].jetpack_featured_media_url}">`;

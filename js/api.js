@@ -16,7 +16,7 @@ async function getBlogs(url) {
       blogList.innerHTML += `
       <div class="blog-card">
         <a href="post.html?id=${results[i].id}">
-            <img src="${results[i].jetpack_featured_media_url}">
+            <img src="${results[i].jetpack_featured_media_url}" alt="${results[i].jetpack_featured_media_url}">
             
             <h2>${results[i].title.rendered}</h2>
             ${results[i].excerpt.rendered}
