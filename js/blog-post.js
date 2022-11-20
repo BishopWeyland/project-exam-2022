@@ -43,3 +43,40 @@ async function getComments() {
 }
 
 getComments();
+
+const commentForm = document.querySelector("#comment-form");
+const postId = document.querySelector("#postId");
+const name = document.querySelector("#name");
+const comment = document.querySelector("#comment");
+
+postId.value = id;
+
+commentForm.addEventListener("submit", submitComment);
+
+async function submitComment(e) {
+  e.preventDefault();
+
+  const [postId, name, comment] = e.target.elements;
+
+  const data = JSON.stringify({
+    post: postId.value,
+    author_name: name.value,
+    content: comment.value,
+  });
+
+  console.log(data);
+
+  try {
+    await fetch(commentsUrl, {
+      method: "post",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: data,
+    });
+  } catch (error) {
+    console.log("error", error);
+  } finally {
+    commentForm.reset();
+  }
+}

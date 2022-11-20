@@ -63,20 +63,13 @@
           <div class="post-container"></div>
           <div class="comment-section"></div>
           <div class="comment-form">
-                  <form onSubmit={this.submitComment.bind(this)}>
-  <input type="hidden" id="postId" value={POST_ID} />
+                  <form id="comment-form">
+          <input type="hidden" id="postId"/>
           <div class="form-control">
             <label>
               Name:
               <input name="name" id="name">
               <small id="name-error" class="error-container"></small>
-            </label>
-          </div>
-          <div class="form-control">
-            <label>
-              E-mail:
-              <input name="email" id="email">
-              <small id="email-error" class="error-container"></small>
             </label>
           </div>
           <div class="form-control">
