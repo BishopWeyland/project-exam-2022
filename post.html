@@ -59,7 +59,37 @@
           <div class="carousel-info"></div>
           <footer><small>Locating Japan 2022©</small></footer>
         </div>
-        <div class="content-container scroll-container post-container"></div>
+        <div class="content-container scroll-container">
+          <div class="post-container"></div>
+          <div class="comment-section"></div>
+          <div class="comment-form">
+                  <form onSubmit={this.submitComment.bind(this)}>
+  <input type="hidden" id="postId" value={POST_ID} />
+          <div class="form-control">
+            <label>
+              Name:
+              <input name="name" id="name">
+              <small id="name-error" class="error-container"></small>
+            </label>
+          </div>
+          <div class="form-control">
+            <label>
+              E-mail:
+              <input name="email" id="email">
+              <small id="email-error" class="error-container"></small>
+            </label>
+          </div>
+          <div class="form-control">
+            <label>
+              Comment: 
+              <textarea name="comment" id="comment" cols="30" rows="10"></textarea>
+              <small id="comment-error" class="error-container-message"></small>
+            </label>
+          </div>
+          <input type="submit" value="Send" id="submit-button" class="btn">
+          </form>
+          </div>
+        </div>
       </div>
     </main>
     <script src="./js/blog-post.js"></script>

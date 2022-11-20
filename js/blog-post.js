@@ -5,10 +5,11 @@ const params = new URLSearchParams(queryString);
 const id = params.get("id");
 
 const url = `https://willand.tech/blog/wp-json/wp/v2/posts/${id}`;
+const commentsUrl = `https://willand.tech/blog/wp-json/wp/v2/comments?post=${id}`;
 
 const postImage = document.querySelector(".carousel");
 const postHeader = document.querySelector(".carousel-info");
-const postContainer = document.querySelector(".content-container");
+const postContainer = document.querySelector(".post-container");
 
 async function getPost() {
   try {
@@ -26,8 +27,19 @@ async function getPost() {
         <small>${results.date}</small>
     </div>`;
 
-    console.log(results);
+    console.log("post", results);
   } catch (error) {}
 }
 
 getPost();
+
+async function getComments() {
+  try {
+    const response = await fetch(commentsUrl);
+    const results = await response.json();
+
+    console.log("comments", results);
+  } catch (error) {}
+}
+
+getComments();
