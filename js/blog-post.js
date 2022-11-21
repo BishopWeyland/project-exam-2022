@@ -33,12 +33,26 @@ async function getPost() {
 
 getPost();
 
+const commentSection = document.querySelector(".comment-section");
+
 async function getComments() {
   try {
     const response = await fetch(commentsUrl);
     const results = await response.json();
-
     console.log("comments", results);
+    for (let i = 0; i < results.length; i++) {
+      commentSection.innerHTML += `
+      <div class="comment-container">
+        <div class="comment-info">
+          <img src="${results[i].author_avatar_urls[24]}">
+            <div class="comment-name">
+              <h3>${results[i].author_name}</h3>
+              <small>${results[i].date}</small>
+            </div>
+        </div>
+          <p>${results[i].content.rendered}</p>
+      </div>`;
+    }
   } catch (error) {}
 }
 
@@ -48,6 +62,8 @@ const commentForm = document.querySelector("#comment-form");
 const postId = document.querySelector("#postId");
 const name = document.querySelector("#name");
 const comment = document.querySelector("#comment");
+
+//comments cant be longer than 120 char!
 
 postId.value = id;
 

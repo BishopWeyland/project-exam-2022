@@ -197,7 +197,7 @@ button {
 .carousel img {
   object-fit: cover;
   height: 100%;
-  width: 55vw;
+  width: 100%;
   object-position: center;
   position: absolute;
   inset: 0;
@@ -211,7 +211,7 @@ button {
 .carousel-info {
   height: 30%;
   padding: 30px;
-  margin-bottom: 18px;
+  margin-bottom: 30px;
 }
 
 .carousel-info h2 {
@@ -542,6 +542,33 @@ textarea {
   margin: 30px 0px;
 }
 
+.comment-section {
+  width: 500px;
+  margin: 0 auto;
+}
+
+.comment-container {
+  background-color: var(--brand-white);
+  border-radius: 10px;
+  margin-bottom: 20px;
+  padding: 10px 30px 30px;
+}
+
+.comment-info {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.comment-name {
+  margin-left: 30px;
+}
+
+.comment-info img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
 .comment-form {
   width: 500px;
   margin: 0 auto;
@@ -553,8 +580,8 @@ textarea {
   flex-direction: column;
 }
 
-/* @media (min-width: 2200px) {
-  .carousel img {
-  
+@media (min-width: 2300px) {
+  body {
+    margin: 0px 500px;
   }
-} */
+}
