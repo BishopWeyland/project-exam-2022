@@ -24,7 +24,7 @@ async function getPost() {
 
     postContainer.innerHTML = `${results.content.rendered}
     <div class="date">
-        <small>${results.date}</small>
+        <small>${results.formatted_date}</small>
     </div>`;
 
     console.log("post", results);
@@ -46,8 +46,7 @@ async function getComments() {
         <div class="comment-info">
           <img src="${results[i].author_avatar_urls[24]}">
             <div class="comment-name">
-              <h3>${results[i].author_name}</h3>
-              <small>${results[i].date}</small>
+              <h3>${results[i].author_name}:</h3>
             </div>
         </div>
           <p>${results[i].content.rendered}</p>
