@@ -11,20 +11,22 @@ async function getCarousel(url) {
     console.log(results);
     let a = 0;
 
-    track.innerHTML = `<a class="slide" href="post.html?id=${results[a].id}"><img src="${results[a].jetpack_featured_media_url}">`;
-    carouselInfo.innerHTML = `<h2>${results[a].title.rendered}</h2>
-    ${results[a].excerpt.rendered}
-    <a href="post.html?id=${results[a].id}" class="btn">Read more</a>`;
+    function carouselFunctionality() {
+      track.innerHTML = `<a class="slide" href="post.html?id=${results[a].id}"><img src="${results[a].jetpack_featured_media_url}">`;
+
+      carouselInfo.innerHTML = `<h2>${results[a].title.rendered}</h2>
+        ${results[a].excerpt.rendered}
+        <a href="post.html?id=${results[a].id}" class="btn">Read more</a>`;
+    }
+
+    carouselFunctionality();
 
     nextButton.addEventListener("click", () => {
       a++;
       if (a > 5) {
         a = 0;
       }
-      track.innerHTML = `<a class="slide" href="post.html?id=${results[a].id}"><img src="${results[a].jetpack_featured_media_url}">`;
-      carouselInfo.innerHTML = `<h2>${results[a].title.rendered}</h2>
-    ${results[a].excerpt.rendered}
-    <a href="post.html?id=${results[a].id}" class="btn">Read more</a>`;
+      carouselFunctionality();
     });
 
     prevButton.addEventListener("click", () => {
@@ -32,10 +34,7 @@ async function getCarousel(url) {
       if (a < 0) {
         a = 5;
       }
-      track.innerHTML = `<a class="slide" href="post.html?id=${results[a].id}"><img src="${results[a].jetpack_featured_media_url}">`;
-      carouselInfo.innerHTML = `<h2>${results[a].title.rendered}</h2>
-    ${results[a].excerpt.rendered}
-    <a href="post.html?id=${results[a].id}" class="btn">Read more</a>`;
+      carouselFunctionality();
     });
   } catch (error) {
     console.log(Error);
