@@ -97,6 +97,7 @@ button {
 .logo {
   display: flex;
   height: 10vh;
+  margin-left: 20px;
 }
 
 .logo-text {
@@ -368,13 +369,18 @@ textarea {
 
 /* About */
 
+.about-container {
+  padding: 50px;
+  margin: 0 auto;
+}
+
 .about-image-1 {
   display: flex;
   align-self: center;
 }
 
 .about-image-1 img {
-  width: 25vw;
+  max-width: 500px;
   margin-top: 50px;
   border-radius: 10px;
 }
@@ -382,8 +388,11 @@ textarea {
 .about-section {
   margin-top: 50px;
   padding: 0px 30px 30px 30px;
-  width: 35vw;
   max-width: 700px;
+}
+
+.about-section p {
+  max-width: 500px;
 }
 
 .about-section h1 {
@@ -402,18 +411,15 @@ textarea {
 .flex-container {
   border-top: solid 2px dimgray;
   padding-top: 50px;
-  display: flex;
-  width: 35vw;
+  display: flexbox;
+  flex-wrap: wrap;
+  max-width: 500px;
 }
 
-.about-image-2 {
-  background-image: url("/images/compressed/selfportrait.JPG");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 30%;
-  width: 30vw;
-  margin: 50px 0px 60px;
-  border-radius: 10px;
+.about-image-2 img {
+  height: 250px;
+  width: 250px;
+  object-fit: cover;
 }
 
 .loading {
