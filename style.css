@@ -523,22 +523,34 @@ textarea {
 
 .post-container {
   padding: 50px;
-  align-items: center;
+  margin: 0 auto;
 }
 
 .post-container p {
   margin-top: 30px;
+  max-width: 500px;
 }
 
 .post-container img {
   border-radius: 10px;
-  width: 500px;
+  max-width: 500px;
   height: fit-content;
 }
 
 .date {
   width: 100%;
   margin: 30px 0px;
+}
+
+.comment-form {
+  width: 500px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+#comment {
+  display: flex;
+  flex-direction: column;
 }
 
 /* @media (min-width: 2200px) {
