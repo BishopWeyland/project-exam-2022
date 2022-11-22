@@ -409,7 +409,7 @@ textarea {
 
 .about1 {
   margin-top: 170px;
-  height: 420px;
+  height: 440px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -428,10 +428,11 @@ textarea {
 }
 
 .about-image-2 img {
-  height: 300px;
+  height: 200px;
   width: 500px;
   object-fit: cover;
   margin: 30px 0px;
+  border-radius: 10px;
 }
 
 .about-image-2 {
