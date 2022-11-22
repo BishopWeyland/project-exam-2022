@@ -234,6 +234,25 @@ button {
   padding: 0px 30px;
 }
 
+.loading {
+  margin: 100px 0px 1000px;
+  border: 20px solid var(--brand-white);
+  border-top: 20px solid dimgray;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 /* footer */
 footer {
   display: flex;
@@ -371,74 +390,66 @@ textarea {
 
 .about-container {
   padding: 50px;
-  margin: 0 auto;
-}
-
-.about-image-1 {
   display: flex;
-  align-self: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .about-image-1 img {
-  max-width: 500px;
-  margin-top: 50px;
-  border-radius: 10px;
+  height: 300px;
+  width: 300px;
+  object-fit: cover;
+  object-position: 20%;
+  border-radius: 50%;
+  border: solid 30px var(--brand-white);
+  position: absolute;
+  left: 20%;
+  top: -40%;
+}
+
+.about1 {
+  margin-top: 170px;
+  height: 420px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
 .about-section {
-  margin-top: 50px;
-  padding: 0px 30px 30px 30px;
-  max-width: 700px;
-}
-
-.about-section p {
+  position: relative;
+  background-color: var(--brand-white);
+  padding: 30px;
+  border-radius: 10px;
   max-width: 500px;
 }
 
-.about-section h1 {
-  margin: 0px 0px 30px 0px;
-}
-
 .about-section p {
-  margin-bottom: 30px;
-  width: fit-content;
-}
-
-.about-section h2 {
-  margin-bottom: 30px;
-}
-
-.flex-container {
-  border-top: solid 2px dimgray;
-  padding-top: 50px;
-  display: flexbox;
-  flex-wrap: wrap;
-  max-width: 500px;
+  margin-top: 30px;
 }
 
 .about-image-2 img {
-  height: 250px;
-  width: 250px;
+  height: 300px;
+  width: 500px;
   object-fit: cover;
+  margin: 30px 0px;
 }
 
-.loading {
-  margin: 100px 0px 1000px;
-  border: 20px solid var(--brand-white);
-  border-top: 20px solid dimgray;
-  border-radius: 50%;
-  width: 200px;
-  height: 200px;
-  animation: spin 2s linear infinite;
+.about-image-2 {
+  border-top: solid 2px dimgray;
+  margin-top: 30px;
 }
 
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+.about-logo {
+  margin-top: 30px;
+  display: flex;
+}
+
+.about-logo span {
+  font-family: "Cairo Play", "Roboto", sans-serif;
+}
+
+.about-logo img {
+  height: 50px;
 }
 
 /* Blogs page */
