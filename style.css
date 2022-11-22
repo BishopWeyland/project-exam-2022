@@ -395,6 +395,11 @@ textarea {
   align-items: center;
 }
 
+.about-image-1 {
+  display: flex;
+  justify-content: center;
+}
+
 .about-image-1 img {
   height: 300px;
   width: 300px;
@@ -403,7 +408,6 @@ textarea {
   border-radius: 50%;
   border: solid 30px var(--brand-white);
   position: absolute;
-  left: 20%;
   top: -40%;
 }
 
