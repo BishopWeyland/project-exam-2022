@@ -236,6 +236,7 @@ button {
   width: 45vw;
   box-shadow: inset 0 0 18px #707070;
   padding: 0px 30px;
+  align-items: center;
 }
 
 .loading {
@@ -768,6 +769,36 @@ textarea {
 /*mobile */
 
 @media (max-width: 570px) {
+  /* global  */
+
+  .logo {
+    margin-left: 10px;
+  }
+
+  .logo img {
+    height: 35px;
+    width: 35px;
+  }
+
+  .logo span {
+    font-size: 25px;
+  }
+
+  .burger-menu {
+    font-size: 25px;
+    margin-right: 10px;
+  }
+
+  /* layout */
+
+  .carousel-info h2 {
+    font-size: 30px;
+  }
+
+  .carousel-info p {
+    font-size: 20px;
+  }
+
   /* about */
 
   .about-container {
