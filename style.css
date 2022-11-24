@@ -378,6 +378,7 @@ footer {
 
 textarea {
   resize: none;
+  width: 95%;
 }
 
 #message {
@@ -750,6 +751,11 @@ textarea {
 
   /* blog post */
 
+  .post-info {
+    min-height: 160px;
+    margin-bottom: 0px;
+  }
+
   .hide {
     display: none;
   }
@@ -782,6 +788,21 @@ textarea {
     width: 250px;
     top: -30%;
   }
+}
+
+/* blog post  */
+
+.post-container img {
+  width: 100%;
+  height: fit-content;
+}
+
+.comment-section {
+  width: fit-content;
+}
+
+.comment-form {
+  width: 100%;
 }
 
 @media (max-width: 430px) {
