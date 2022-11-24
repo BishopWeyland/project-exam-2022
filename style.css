@@ -405,8 +405,8 @@ textarea {
 }
 
 .about-image-1 img {
-  height: 300px;
-  width: 300px;
+  height: 280px;
+  width: 280px;
   object-fit: cover;
   object-position: 20%;
   border-radius: 50%;
@@ -417,7 +417,7 @@ textarea {
 
 .about1 {
   margin-top: 170px;
-  height: 440px;
+  height: 450px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -757,5 +757,24 @@ textarea {
 
   .hide2 {
     display: flex;
+  }
+}
+
+/*mobile */
+
+@media (max-width: 570px) {
+  /* about */
+
+  .about-container {
+    padding: 50px 0px;
+  }
+
+  .about-section {
+    max-width: 100%;
+  }
+
+  .about1 {
+    margin-top: 200px;
+    height: 500px;
   }
 }
