@@ -548,7 +548,35 @@ textarea {
 
 /* Blog post page */
 
-.post-container {
+#overlay {
+  background-color: transparent;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: block;
+  z-index: 9998;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+#larger-image {
+  background-color: dimgray;
+  height: 700px;
+  width: 1000px;
+  overflow: hidden;
+  display: none;
+}
+
+#larger-image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.larger .post-container {
   padding: 50px 0px;
   margin: 0 auto;
 }

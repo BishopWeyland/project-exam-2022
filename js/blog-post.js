@@ -10,6 +10,8 @@ const commentsUrl = `https://willand.tech/blog/wp-json/wp/v2/comments?post=${id}
 const postImage = document.querySelector(".carousel");
 const postHeader = document.querySelector(".carousel-info");
 const postContainer = document.querySelector(".post-container");
+const overlay = document.querySelector("#overlay");
+const largerImage = document.querySelector("#larger-image");
 
 async function getPost() {
   try {
@@ -26,6 +28,24 @@ async function getPost() {
     <div class="date">
         <small>${results.formatted_date}</small>
     </div>`;
+
+    const image = document.querySelector(".wp-block-image");
+
+    const imageButton = image.firstChild;
+    console.log(image);
+
+    document.onclick = function (event) {
+      if (event.target.id === "overlay") {
+        largerImage.style.display = "none";
+        overlay.style.display = "none";
+      }
+      if (event.target === imageButton) {
+        largerImage.style.display = "block";
+        overlay.style.display = "flex";
+      }
+      console.log("click");
+    };
+    largerImage.innerHTML = `<div>${results.content.rendered}</div>`;
 
     console.log("post", results);
   } catch (error) {}
