@@ -766,7 +766,7 @@ textarea {
   /* about */
 
   .about-container {
-    padding: 50px 0px;
+    padding: 30px 0px;
   }
 
   .about-section {
@@ -776,5 +776,11 @@ textarea {
   .about1 {
     margin-top: 200px;
     height: 500px;
+  }
+
+  .about-image-1 img {
+    height: 250px;
+    width: 250px;
+    top: -30%;
   }
 }
