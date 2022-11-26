@@ -13,6 +13,10 @@ const postContainer = document.querySelector(".post-container");
 const overlay = document.querySelector("#overlay");
 const largerImage = document.querySelector("#larger-image");
 
+// meta content
+const title = document.querySelector("title");
+const metaContent = document.querySelector(".meta-content");
+
 async function getPost() {
   try {
     const response = await fetch(url);
@@ -47,7 +51,10 @@ async function getPost() {
     };
     largerImage.innerHTML = `<div>${results.content.rendered}</div>`;
 
-    console.log("post", results);
+    title.innerHTML = `${results.title.rendered} | Locating Japan`;
+    metaContent.innerHTML = `
+    name="description"
+    content="${results.excerpt.rendered}"`;
   } catch (error) {}
 }
 
