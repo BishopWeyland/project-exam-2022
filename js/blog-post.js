@@ -39,7 +39,7 @@ async function getPost() {
     console.log(image);
 
     document.onclick = function (event) {
-      if (event.target.id === "overlay") {
+      if (event.target.id === "overlay" || "largerImage") {
         largerImage.style.display = "none";
         overlay.style.display = "none";
       }
