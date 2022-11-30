@@ -838,6 +838,7 @@ textarea {
   .hero {
     padding-top: 100px;
     height: 700px;
+    margin-bottom: 30px;
   }
 
   .hero-content h1 {
@@ -863,7 +864,9 @@ textarea {
   }
 
   .hide2 {
+    height: 30px;
     display: flex;
+    align-items: center;
   }
 }
 
