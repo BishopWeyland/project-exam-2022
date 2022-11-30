@@ -314,9 +314,12 @@ footer {
 /* index */
 
 .hero {
-  -webkit-box-shadow: inset 0 18px 18px -18px rgba(112, 112, 112, 0.8);
-  -moz-box-shadow: inset 0 18px 18px -18px rgba(112, 112, 112, 0.8);
-  box-shadow: inset 0 18px 18px -18px rgba(112, 112, 112, 0.8);
+  -webkit-box-shadow: inset 0 18px 18px -18px rgba(112, 112, 112, 0.8),
+    inset 0 -18px 18px -18px rgba(112, 112, 112, 0.8);
+  -moz-box-shadow: inset 0 18px 18px -18px rgba(112, 112, 112, 0.8),
+    inset 0 -18px 18px -18px rgba(112, 112, 112, 0.8);
+  box-shadow: inset 0 18px 18px -18px rgba(112, 112, 112, 0.8),
+    inset 0 -18px 18px -18px rgba(112, 112, 112, 0.8);
   background-image: linear-gradient(
       rgba(255, 255, 255, 0.3),
       rgba(255, 255, 255, 0.3)
