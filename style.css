@@ -518,19 +518,47 @@ textarea {
   padding: 15px 30px;
 }
 
-.per-page-container {
-  margin: 30px 0px;
-}
-
-.categories input {
-  margin-right: 80px;
-}
-
 .radio-select-container {
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: row;
+  width: 500px;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+}
+
+.categories {
+  margin: 30px;
+  display: flex;
+}
+
+.category {
+  display: none;
+}
+.categories label {
+  cursor: pointer;
+  color: white;
+  font-size: 18px;
+  font-family: "Roboto", sans-serif;
+  background-color: var(--brand-red);
+  border-radius: 10px;
+  padding: 18px 30px;
+  margin-right: 20px;
+}
+
+.categories label:hover {
+  padding: 18px 60px;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+}
+
+.categories input[type="radio"]:checked + label {
+  background-color: #791c10;
+}
+
+.categories label:active {
+  background-color: #791c10;
+  -webkit-transition-duration: 0.1s;
+  transition-duration: 0.1s;
 }
 
 .blog-list {

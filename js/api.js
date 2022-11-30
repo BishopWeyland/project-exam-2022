@@ -72,6 +72,7 @@ categories.forEach(function (category) {
       const chosenCategory = event.target.value;
       newUrl = url + `?categories=${chosenCategory}`;
     }
+
     blogList.innerHTML = "";
 
     getBlogs(newUrl);
