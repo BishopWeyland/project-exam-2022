@@ -343,7 +343,7 @@ footer {
 
 /* Contact */
 .form-container {
-  width: fit-content;
+  width: 80%;
   padding: 60px;
   display: flex;
   width: 100%;
@@ -399,16 +399,16 @@ footer {
 }
 .form-control input {
   height: 30px;
-  width: 95%;
+  width: 100%;
 }
 
 textarea {
   resize: none;
-  width: 95%;
+  width: 100%;
 }
 
 #message {
-  width: 95%;
+  width: 100;
 }
 
 #submit-button {
@@ -463,15 +463,10 @@ textarea {
 }
 
 .about-image-2 img {
-  width: 100%;
+  max-width: 500px;
   object-fit: cover;
   margin: 30px 0px;
   border-radius: 10px;
-}
-
-.about-image-2 {
-  border-top: solid 2px dimgray;
-  margin-top: 30px;
 }
 
 .about-logo {
@@ -521,7 +516,7 @@ textarea {
 .radio-select-container {
   display: flex;
   flex-direction: row;
-  width: 500px;
+  max-width: 500px;
   align-items: center;
   justify-content: center;
 }
@@ -655,7 +650,7 @@ textarea {
 }
 
 .comment-section {
-  width: 500px;
+  max-width: 500px;
   margin: 0 auto;
 }
 
@@ -683,7 +678,7 @@ textarea {
 }
 
 .comment-form {
-  width: 500px;
+  max-width: 500px;
   margin: 0 auto;
   margin-bottom: 30px;
 }
