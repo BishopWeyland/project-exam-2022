@@ -898,6 +898,10 @@ textarea {
 
   /* layout */
 
+  .carousel-button {
+    font-size: 1.3rem;
+  }
+
   .carousel-info h2 {
     font-size: 30px;
   }
