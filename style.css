@@ -900,27 +900,17 @@ textarea {
   .carousel-info p {
     font-size: 20px;
   }
+}
 
-  /* about */
+/* blogs page */
 
-  .about-container {
-    padding: 30px 0px;
-  }
+.categories label {
+  font-size: 12px;
+  padding: 15px 20px;
+}
 
-  .about-section {
-    max-width: 100%;
-  }
-
-  .about1 {
-    margin-top: 170px;
-    height: 500px;
-  }
-
-  .about-image-1 img {
-    height: 250px;
-    width: 250px;
-    top: -30%;
-  }
+.categories label:hover {
+  padding: 15px 30px;
 }
 
 /* blog post  */
@@ -953,11 +943,5 @@ textarea {
 
   .hero-content h2 {
     font-size: 20px;
-  }
-
-  /* about */
-
-  .about1 {
-    height: 600px;
   }
 }
