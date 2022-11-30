@@ -110,6 +110,28 @@ button {
   background-color: #791c10;
 }
 
+label {
+  font-size: 18px;
+  font-family: "Roboto", sans-serif;
+}
+
+input,
+textarea {
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+input:focus {
+  border: 2px solid dimgray;
+  outline: none;
+}
+
+textarea:focus {
+  border: 2px solid dimgray;
+  outline: none;
+}
+
 /* Navigation */
 
 .nav-bar {
@@ -343,16 +365,12 @@ footer {
 
 /* Contact */
 .form-container {
-  width: 80%;
+  max-width: 500px;
   padding: 60px;
   display: flex;
   width: 100%;
   justify-content: center;
   display: flex;
-}
-
-#form label {
-  font-family: "Roboto", sans-serif;
 }
 
 #submit-message {
@@ -381,7 +399,7 @@ footer {
 .error-container-message {
   position: absolute;
   z-index: 2;
-  top: 220px;
+  top: 230px;
   left: 0;
   width: 400px;
 }
@@ -491,16 +509,11 @@ textarea {
 }
 
 .search-input {
-  font-size: 20px;
-  border: none;
   border-radius: 10px 0px 0px 10px;
-  appearance: none;
 }
 
 .search-input:focus {
-  border: 2px solid dimgray;
   border-right: 0;
-  outline: none;
 }
 
 .search-button {
@@ -532,8 +545,6 @@ textarea {
 .categories label {
   cursor: pointer;
   color: white;
-  font-size: 18px;
-  font-family: "Roboto", sans-serif;
   background-color: var(--brand-red);
   border-radius: 10px;
   padding: 18px 30px;
