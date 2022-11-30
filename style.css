@@ -755,6 +755,10 @@ textarea {
     overflow-y: visible;
   }
 
+  .scroll-btn {
+    display: none;
+  }
+
   .menu {
     background-color: var(--brand-white);
     display: grid;
