@@ -17,6 +17,10 @@
   --brand-pink: #edc7e1;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 ul {
   list-style: none;
 }
@@ -83,6 +87,27 @@ button {
   overflow-y: scroll;
   display: flex;
   flex-direction: column;
+}
+
+.scroll-btn {
+  position: absolute;
+  z-index: 9999;
+  bottom: 20px;
+  right: 20px;
+  color: white;
+  background-color: var(--brand-red);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.scroll-btn:hover {
+  padding: 15px;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+}
+
+.scroll-btn:active {
+  background-color: #791c10;
 }
 
 /* Navigation */
@@ -512,6 +537,7 @@ textarea {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  padding-bottom: 40px;
 }
 
 .blog-card {
@@ -542,8 +568,8 @@ textarea {
   object-fit: cover;
 }
 
-.show-all {
-  margin: 50px 0px;
+.show-more {
+  margin-bottom: 20px;
 }
 
 /* Blog post page */
