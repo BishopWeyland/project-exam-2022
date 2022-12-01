@@ -10,7 +10,6 @@ async function getComments() {
   try {
     const response = await fetch(commentsUrl);
     const results = await response.json();
-    console.log("comments", results);
     for (let i = 0; i < results.length; i++) {
       commentSection.innerHTML += `
       <div class="comment-container">
@@ -54,8 +53,6 @@ async function submitComment(e) {
     author_name: name.value,
     content: comment.value,
   });
-
-  console.log(data);
 
   try {
     await fetch(commentsUrl, {

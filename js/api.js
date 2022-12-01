@@ -37,7 +37,6 @@ let morePages = 20;
 let moreUrl = `${url}?per_page=${morePages}`;
 
 showMore.addEventListener("click", () => {
-  console.log("moreUrl", moreUrl, "morePages", morePages);
   morePages += 10;
   moreUrl = `${url}?per_page=${morePages}`;
   blogList.innerHTML = "";

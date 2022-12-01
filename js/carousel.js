@@ -8,7 +8,6 @@ async function getCarousel(url) {
   try {
     const response = await fetch(url);
     const results = await response.json();
-    console.log(results);
     let a = 0;
 
     function carouselFunctionality() {
