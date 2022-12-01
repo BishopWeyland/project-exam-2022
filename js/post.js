@@ -24,19 +24,22 @@ async function getPost() {
     const response = await fetch(url);
     const results = await response.json();
 
-    postImage.innerHTML = ` <img src="${results.jetpack_featured_media_url}">`;
+    postImage.innerHTML = `
+    <img src="${results.jetpack_featured_media_url}">`;
 
     postHeader.innerHTML = `
     <h1>${results.title.rendered}</h1>
         ${results.excerpt.rendered}`;
 
-    postContainer.innerHTML = `${results.content.rendered}
+    postContainer.innerHTML = `
+    ${results.content.rendered}
     <div class="date">
-        <small>${results.formatted_date}</small>
+      <small>${results.formatted_date}</small>
     </div>`;
 
-    const image = document.querySelector(".wp-block-image");
+    //larger image
 
+    const image = document.querySelector(".wp-block-image");
     const imageButton = image.firstChild;
 
     document.onclick = function (event) {
@@ -49,15 +52,23 @@ async function getPost() {
         overlay.style.display = "flex";
       }
     };
-    largerImage.innerHTML = `<div>${results.content.rendered}</div>`;
+    largerImage.innerHTML = `
+    <div>${results.content.rendered}</div>`;
 
-    title.innerHTML = `${results.title.rendered} | Locating Japan`;
+    //meta data
+
+    title.innerHTML = `
+    ${results.title.rendered} | Locating Japan`;
+
     metaContent.innerHTML = `
     name="description"
     content="${results.excerpt.rendered}"`;
   } catch (error) {
-    postContainer.innerHTML = `<div class="error-message"><p><i class="fa-solid fa-circle-exclamation"></i>I am sorry, an error has occured. Please try to refresh the page.</p>
-    <p>${error}</p></div>`;
+    postContainer.innerHTML = `
+    <div class="error-message">
+      <p><i class="fa-solid fa-circle-exclamation"></i>I am sorry, an error has occured. Please try to refresh the page.</p>
+      <p>${error}</p>
+    </div>`;
   }
 }
 
