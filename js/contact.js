@@ -12,6 +12,8 @@ const emailError = document.querySelector("#email-error");
 const subjectError = document.querySelector("#subject-error");
 const messageError = document.querySelector("#message-error");
 
+// contact form validation
+
 function validateForm(event) {
   event.preventDefault();
 
@@ -37,12 +39,17 @@ function validateForm(event) {
     checkLength(subject.value, 15) &&
     checkLength(message.value, 25)
   ) {
-    submitMessage.innerHTML = `<div class="form-message"><p>Your message has been sent. You will receive a response on your e-mail.</p></div>`;
+    submitMessage.innerHTML = `
+    <div class="form-message">
+      <p>Your message has been sent. You will receive a response on your e-mail.</p>
+    </div>`;
     form.reset();
   }
 }
 
 form.addEventListener("submit", validateForm);
+
+//check length of inputs
 
 function checkLength(value, length) {
   if (value.trim().length >= length) {
@@ -50,6 +57,8 @@ function checkLength(value, length) {
   }
   return false;
 }
+
+// validate e-mail
 
 function validateEmail(email) {
   const regEx = /\S+@\S+\.\S+/;
