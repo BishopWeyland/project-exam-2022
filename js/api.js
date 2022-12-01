@@ -24,8 +24,8 @@ async function getBlogs(url) {
     </div>`;
     }
   } catch (error) {
-    contentContainer.innerHTML = "<p>An error has occured</p>";
-    console.log(error);
+    contentContainer.innerHTML = `<div class="error-message"><p><i class="fa-solid fa-circle-exclamation"></i>I am sorry, an error has occured. Please try to refresh the page.</p>
+    <p>${error}</p></div>`;
   }
 }
 
@@ -56,8 +56,8 @@ async function getMoreBlogs() {
     </div>`;
     }
   } catch (error) {
-    contentContainer.innerHTML = "<p>An error has occured</p>";
-    console.log(error);
+    contentContainer.innerHTML = `<div class="error-message"><p><i class="fa-solid fa-circle-exclamation"></i>I am sorry, an error has occured. Please try to refresh the page.</p>
+    <p>${error}</p></div>`;
   }
 }
 

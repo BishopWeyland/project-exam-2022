@@ -55,7 +55,10 @@ async function getPost() {
     metaContent.innerHTML = `
     name="description"
     content="${results.excerpt.rendered}"`;
-  } catch (error) {}
+  } catch (error) {
+    postContainer.innerHTML = `<div class="error-message"><p><i class="fa-solid fa-circle-exclamation"></i>I am sorry, an error has occured. Please try to refresh the page.</p>
+    <p>${error}</p></div>`;
+  }
 }
 
 getPost();
@@ -79,7 +82,10 @@ async function getComments() {
           <p>${results[i].content.rendered}</p>
       </div>`;
     }
-  } catch (error) {}
+  } catch (error) {
+    commentSection.innerHTML = `<div class="error-message"><p><i class="fa-solid fa-circle-exclamation"></i>I am sorry, an error has occured. Please try to refresh the page.</p>
+    <p>${error}</p></div>`;
+  }
 }
 
 getComments();
@@ -117,7 +123,8 @@ async function submitComment(e) {
       body: data,
     });
   } catch (error) {
-    console.log("error", error);
+    commentForm.innerHTML = `<div class="error-message"><p><i class="fa-solid fa-circle-exclamation"></i>I am sorry, an error has occured. Please try to refresh the page.</p>
+    <p>${error}</p></div>`;
   } finally {
     commentForm.reset();
   }

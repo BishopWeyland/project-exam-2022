@@ -133,8 +133,22 @@ textarea:focus {
 }
 
 .error-message {
-  background-color: var(--brand-red);
-  height: 200px;
+  padding: 20px;
+  border: dashed 4px var(--brand-red);
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.error-message p {
+  margin-bottom: 20px;
+}
+
+.error-message i {
+  color: var(--brand-red);
+  font-size: 30px;
+  margin-right: 10px;
 }
 
 /* Navigation */

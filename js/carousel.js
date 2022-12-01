@@ -37,7 +37,8 @@ async function getCarousel(url) {
       carouselFunctionality();
     });
   } catch (error) {
-    console.log(Error);
+    carouselInfo.innerHTML = `<div class="error-message"><p><i class="fa-solid fa-circle-exclamation"></i>I am sorry, an error has occured. Please try to refresh the page.</p>
+    <p>${error}</p></div>`;
   }
 }
 
