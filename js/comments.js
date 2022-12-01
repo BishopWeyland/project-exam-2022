@@ -23,8 +23,11 @@ async function getComments() {
       </div>`;
     }
   } catch (error) {
-    commentSection.innerHTML = `<div class="error-message"><p><i class="fa-solid fa-circle-exclamation"></i>I am sorry, an error has occured. Please try to refresh the page.</p>
-    <p>${error}</p></div>`;
+    commentSection.innerHTML = `
+    <div class="error-message">
+      <p><i class="fa-solid fa-circle-exclamation"></i>I am sorry, an error has occured. Please try to refresh the page.</p>
+      <p>${error}</p>
+    </div>`;
   }
 }
 
@@ -63,8 +66,11 @@ async function submitComment(e) {
       body: data,
     });
   } catch (error) {
-    commentForm.innerHTML = `<div class="error-message"><p><i class="fa-solid fa-circle-exclamation"></i>I am sorry, an error has occured. Please try to refresh the page.</p>
-    <p>${error}</p></div>`;
+    commentForm.innerHTML = `
+    <div class="error-message">
+      <p><i class="fa-solid fa-circle-exclamation"></i>I am sorry, an error has occured. Please try to refresh the page.</p>
+      <p>${error}</p>
+    </div>`;
   } finally {
     commentForm.reset();
   }
