@@ -132,6 +132,11 @@ textarea:focus {
   outline: none;
 }
 
+.error-message {
+  background-color: var(--brand-red);
+  height: 200px;
+}
+
 /* Navigation */
 
 .nav-bar {
