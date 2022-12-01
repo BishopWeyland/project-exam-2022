@@ -5,11 +5,12 @@ const categories = document.querySelectorAll(".category");
 const searchButton = document.querySelector(".search-button");
 const showMore = document.querySelector(".show-more");
 
+// Get array of blog-posts from API.
+
 async function getBlogs(url) {
   try {
     const response = await fetch(url);
     const results = await response.json();
-    console.log(results);
     blogList.innerHTML = "";
 
     for (let i = 0; i < results.length; i++) {
@@ -28,6 +29,9 @@ async function getBlogs(url) {
     <p>${error}</p></div>`;
   }
 }
+getBlogs(url);
+
+// Show 10 more results each time the "show-more" button is pressed.
 
 let morePages = 20;
 let moreUrl = `${url}?per_page=${morePages}`;
@@ -61,7 +65,7 @@ async function getMoreBlogs() {
   }
 }
 
-getBlogs(url);
+// Use radio buttons to show posts by category.
 
 categories.forEach(function (category) {
   category.onclick = function (event) {
