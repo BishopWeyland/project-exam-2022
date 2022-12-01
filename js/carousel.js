@@ -1,4 +1,4 @@
-const url = `https://willand.tech/blog/wp-json/wp/v2/posts`;
+const carouselUrl = `https://willand.tech/blog/wp-json/wp/v2/posts`;
 const nextButton = document.querySelector(".next");
 const prevButton = document.querySelector(".prev");
 const track = document.querySelector(".track");
@@ -6,7 +6,7 @@ const carouselInfo = document.querySelector(".carousel-info");
 
 async function getCarousel(url) {
   try {
-    const response = await fetch(url);
+    const response = await fetch(carouselUrl);
     const results = await response.json();
     let a = 0;
 
@@ -41,4 +41,4 @@ async function getCarousel(url) {
   }
 }
 
-getCarousel(url);
+getCarousel(carouselUrl);

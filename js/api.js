@@ -31,7 +31,6 @@ async function getBlogs(url) {
 getBlogs(url);
 
 // Show 10 more results each time the "show-more" button is pressed.
-
 const showMore = document.querySelector(".show-more");
 
 let morePages = 20;
