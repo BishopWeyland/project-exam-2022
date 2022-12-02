@@ -4,7 +4,7 @@ const prevButton = document.querySelector(".prev");
 const track = document.querySelector(".track");
 const carouselInfo = document.querySelector(".carousel-info");
 
-async function getCarousel(url) {
+async function getCarousel(carouselUrl) {
   try {
     const response = await fetch(carouselUrl);
     const results = await response.json();

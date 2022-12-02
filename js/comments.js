@@ -49,6 +49,9 @@ commentForm.addEventListener("submit", submitComment);
 async function submitComment(e) {
   e.preventDefault();
 
+  // if (isValid) {
+  // }
+
   const [postId, name, comment] = e.target.elements;
 
   const data = JSON.stringify({
