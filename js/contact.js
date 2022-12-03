@@ -1,16 +1,16 @@
-const form = document.querySelector("#form");
-const name = document.querySelector("#name");
-const email = document.querySelector("#email");
-const subject = document.querySelector("#subject");
-const message = document.querySelector("#message");
-const submitMessage = document.querySelector("#submit-message");
-
-//Error containers
-
-const nameError = document.querySelector("#name-error");
-const emailError = document.querySelector("#email-error");
-const subjectError = document.querySelector("#subject-error");
-const messageError = document.querySelector("#message-error");
+import { checkLength, validateEmail } from "./form-validation.js";
+import {
+  form,
+  name,
+  email,
+  subject,
+  message,
+  submitMessage,
+  nameError,
+  emailError,
+  subjectError,
+  messageError,
+} from "./form-variables.js";
 
 // contact form validation
 
@@ -48,20 +48,3 @@ function validateForm(event) {
 }
 
 form.addEventListener("submit", validateForm);
-
-//check length of inputs
-
-function checkLength(value, length) {
-  if (value.trim().length >= length) {
-    return true;
-  }
-  return false;
-}
-
-// validate e-mail
-
-function validateEmail(email) {
-  const regEx = /\S+@\S+\.\S+/;
-  const patternMatch = regEx.test(email);
-  return patternMatch;
-}

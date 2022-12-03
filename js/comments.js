@@ -1,4 +1,6 @@
 import { id } from "./post.js";
+import { checkLength } from "./form-validation.js";
+import { name, nameError, comment, commentError } from "./form-variables.js";
 
 const commentsUrl = `https://willand.tech/blog/wp-json/wp/v2/comments?post=${id}`;
 
@@ -37,8 +39,6 @@ getComments();
 
 const commentForm = document.querySelector("#comment-form");
 const postId = document.querySelector("#postId");
-const name = document.querySelector("#name");
-const comment = document.querySelector("#comment");
 
 //comments cant be longer than 120 char!
 
@@ -49,32 +49,39 @@ commentForm.addEventListener("submit", submitComment);
 async function submitComment(e) {
   e.preventDefault();
 
-  // if (isValid) {
-  // }
+  if (!checkLength(name.value, 2)) {
+    nameError.innerHTML = "Your name needs to be atlest 2 characters.";
+  }
 
-  const [postId, name, comment] = e.target.elements;
+  if (!checkLength(comment.value, 3)) {
+    commentError.innerHTML = "Your comment needs to be atlest 3 characters.";
+  }
 
-  const data = JSON.stringify({
-    post: postId.value,
-    author_name: name.value,
-    content: comment.value,
-  });
+  if (checkLength(name.value, 2) && checkLength(comment.value, 3)) {
+    const [postId, name, comment] = e.target.elements;
 
-  try {
-    await fetch(commentsUrl, {
-      method: "post",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: data,
+    const data = JSON.stringify({
+      post: postId.value,
+      author_name: name.value,
+      content: comment.value,
     });
-  } catch (error) {
-    commentForm.innerHTML = `
+
+    try {
+      await fetch(commentsUrl, {
+        method: "post",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: data,
+      });
+    } catch (error) {
+      commentForm.innerHTML = `
     <div class="error-message">
       <p><i class="fa-solid fa-circle-exclamation"></i>I am sorry, an error has occured. Please try to refresh the page.</p>
       <p>${error}</p>
     </div>`;
-  } finally {
-    commentForm.reset();
+    } finally {
+      commentForm.reset();
+    }
   }
 }
