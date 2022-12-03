@@ -14,7 +14,7 @@ import {
 
 // contact form validation
 
-function validateForm(event) {
+async function validateForm(event) {
   event.preventDefault();
 
   if (!checkLength(name.value, 5)) {
@@ -39,11 +39,24 @@ function validateForm(event) {
     checkLength(subject.value, 15) &&
     checkLength(message.value, 25)
   ) {
-    submitMessage.innerHTML = `
+    try {
+      const formElement = event.target,
+        { action, method } = formElement,
+        body = new FormData(formElement);
+      console.log(formElement);
+      fetch(action, {
+        method,
+        body,
+      });
+    } catch (error) {
+      console.log(error);
+    } finally {
+      submitMessage.innerHTML = `
     <div class="form-message">
       <p>Your message has been sent. You will receive a response on your e-mail.</p>
     </div>`;
-    form.reset();
+      form.reset();
+    }
   }
 }
 
