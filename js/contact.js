@@ -49,7 +49,11 @@ async function validateForm(event) {
         body,
       });
     } catch (error) {
-      console.log(error);
+      form.innerHTML = `
+      <div class="error-message">
+        <p><i class="fa-solid fa-circle-exclamation"></i>I am sorry, an error has occured. Please try to refresh the page.</p>
+        <p>${error}</p>
+      </div>`;
     } finally {
       submitMessage.innerHTML = `
     <div class="form-message">
