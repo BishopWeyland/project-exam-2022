@@ -40,8 +40,6 @@ getComments();
 const commentForm = document.querySelector("#comment-form");
 const postId = document.querySelector("#postId");
 
-//comments cant be longer than 120 char!
-
 postId.value = id;
 
 commentForm.addEventListener("submit", submitComment);
