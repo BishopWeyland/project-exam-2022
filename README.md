@@ -37,7 +37,7 @@ There was an optional second part to the assignment.
 - UX Design
 - HTML
 - CSS
-- Javascript
+- JavaScript
 - Wordpress
 
 ## Contact
