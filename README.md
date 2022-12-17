@@ -52,8 +52,10 @@ There was an optional second part to the assignment.
 
 ## Acknowledgments
 
-«Libberry» (2015, feb 10.) Cherry Blossom. OPENCLIPART https://openclipart.org/detail/213934/cherry-blossom
+- [Font Awesome](https://fontawesome.com/)
 
-Róbert, Mészáros (2021, apr 9.) Headless Form Submission With the WordPress REST API. CSS-Tricks, https://css-tricks.com/headless-form-submission-with-the-wordpress-rest-api/
+- «Libberry» (2015, feb 10.) Cherry Blossom. OPENCLIPART https://openclipart.org/detail/213934/cherry-blossom
 
-Balée, Adam J. (2020, jan 4.) Add a Formatted Date to the WordPress REST API JSON Response, Adambalee, https://adambalee.com/add-a-formatted-date-to-the-wordpress-rest-api-json-response/
+- Róbert, Mészáros (2021, apr 9.) Headless Form Submission With the WordPress REST API. CSS-Tricks, https://css-tricks.com/headless-form-submission-with-the-wordpress-rest-api/
+
+- Balée, Adam J. (2020, jan 4.) Add a Formatted Date to the WordPress REST API JSON Response, Adambalee, https://adambalee.com/add-a-formatted-date-to-the-wordpress-rest-api-json-response/
