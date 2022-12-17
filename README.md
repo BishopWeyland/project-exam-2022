@@ -2,24 +2,24 @@
 
 ![image](./images/Skjermbilde%202022-12-09%20kl.%2014.14.05.png)
 
-This is a project exam from the first year of the "front-end development course at Noroff.
+This is a project exam from the first year of the "front-end development" course at Noroff.
 
 ## Description
 
-The assignment for the project was to develop a blog of my own choice. I chose to make a travel blog about locations in Japan and things to do there. I used my own images from my own trip. I was tasked with setting up a hedless CMS through wordpress for all the blog posts.
+The assignment for the project was to develop a blog of my own choice. I chose to make a travel blog about locations in Japan and things to do there. I used my own images from my own trip. I was tasked with setting up a headless CMS through Wordpress for all the blog posts.
 
-The assignment requiered:
+The assignment required:
 
 - Home page
 - About page
-- List of blog post
-- Blog post spesific page
+- List of blog posts
+- Blog post specific page
 - Contact page
 
-The home page required a carousel featureing the latest posts.
+The home page required a carousel featuring the latest posts.
 The list of blog posts should only load 10 posts and have a button to load more posts.
 The blog spesific page should be dynamicly built using a query string parameter. Images on the posts should appear larger when clicked and dissapear when you click outside of them.
-The contact page must contain:
+The contact page form must contain:
 
 - Name (Should be more than 5 characters long)
 - Email address (Must be a valid email address)
@@ -48,7 +48,7 @@ There was an optional second part to the assignment.
 
 ## Live link
 
-- [Locaing Japan](https://comforting-longma-e3f21d.netlify.app)
+- [Locating Japan](https://comforting-longma-e3f21d.netlify.app)
 
 ## Acknowledgments
 
